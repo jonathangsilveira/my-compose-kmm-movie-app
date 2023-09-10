@@ -24,7 +24,7 @@ internal class DiscoverMoviesRepositoryImpl(
             title = "Upcoming",
             items = upcomingMovies
         )
-        val topRatedMovies = remoteDataSource.getUpcomingMovies(language = DEFAULT_LANGUAGE)
+        val topRatedMovies = remoteDataSource.getTopRatedMovies(language = DEFAULT_LANGUAGE)
         val topRatedSection= MoviePosterSectionModel(
             title = "Top Rated",
             items = topRatedMovies
