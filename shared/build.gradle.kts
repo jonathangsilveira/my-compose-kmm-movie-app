@@ -4,7 +4,7 @@ plugins {
     id("com.android.library")
     id("org.jetbrains.compose")
 
-    kotlin("plugin.serialization") version "1.8.21"
+    kotlin("plugin.serialization") version "1.9.10"
 }
 
 kotlin {
@@ -39,9 +39,13 @@ kotlin {
                 implementation(compose.components.resources)
 
                 implementation("media.kamel:kamel-image:0.6.0")
+
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
+
                 implementation("io.ktor:ktor-client-core:2.3.3")
                 implementation("io.ktor:ktor-client-content-negotiation:2.3.3")
                 implementation("io.ktor:ktor-serialization-kotlinx-json:2.3.3")
+
                 implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.1")
 
                 api("dev.icerock.moko:mvvm-core:0.16.1")
@@ -80,7 +84,7 @@ kotlin {
 
 android {
     compileSdk = (findProperty("android.compileSdk") as String).toInt()
-    namespace = "com.myapplication.common"
+    namespace = "com.silveira.jonathang.kmm.compose.common"
 
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
     sourceSets["main"].res.srcDirs("src/androidMain/res")

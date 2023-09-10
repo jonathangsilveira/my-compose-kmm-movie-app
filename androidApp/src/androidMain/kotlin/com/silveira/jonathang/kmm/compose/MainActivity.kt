@@ -1,4 +1,4 @@
-package com.myapplication
+package com.silveira.jonathang.kmm.compose
 
 import MainView
 import android.os.Bundle
