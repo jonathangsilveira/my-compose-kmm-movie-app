@@ -19,7 +19,8 @@ import presentation.DiscoverMoviesViewState
 fun NowPlayingMoviesScreen(
     viewState: DiscoverMoviesViewState,
     modifier: Modifier = Modifier,
-    onPull: () -> Unit = {}
+    onPull: () -> Unit = {},
+    onMovieClick: () -> Unit = {}
 ) {
     val pullRefreshState = rememberPullRefreshState(
         refreshing = viewState.isLoading,
